@@ -1,9 +1,5 @@
 <?php
 
-// app/Models/Team.php
-
-// app/Models/Team.php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -13,10 +9,5 @@ class Team extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'user_id', 'personal_team'];
-
-    public function users()
-    {
-        return $this->hasMany(User::class);
-    }
+    protected $fillable = ['name'];
 }

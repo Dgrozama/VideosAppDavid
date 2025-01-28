@@ -13,6 +13,15 @@ class TwoFactorAuthenticationSettingsTest extends TestCase
 {
     use RefreshDatabase;
 
+    public function test_example(): void
+    {
+        $user = User::factory()->create();
+
+        $this->actingAs($user);
+
+        // Add your test logic here
+    }
+
     public function test_two_factor_authentication_can_be_enabled(): void
     {
         if (! Features::canManageTwoFactorAuthentication()) {
