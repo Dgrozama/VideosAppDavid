@@ -2,20 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\DefaultVideoHelper;
 use App\Models\Video;
-use Illuminate\Http\Request;
-use Illuminate\View\View;
+use Tests\Unit\VideosTest;
 
 class VideosController extends Controller
 {
-    public function show(int $id): View
-    {
-        $video = Video::findOrFail($id);
-        return view('videos.show', compact('video'));
+    public function testedBy(){
+        return VideosTest::class;
     }
 
-    public function testedBy(): void
-    {
-        // Implement the logic for testedBy
+    public function show($id){
+        $video = Video::find($id);
+
+        if(!$video){
+            return response()->json([
+                'message' => 'Video not found'
+            ], 404);
+        }
+
+        return view('videos.show', compact('video'));
     }
 }

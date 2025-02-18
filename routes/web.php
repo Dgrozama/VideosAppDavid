@@ -7,6 +7,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -16,4 +18,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
 Route::get('/videos/{id}', [VideosController::class, 'show'])->name('videos.show');
+

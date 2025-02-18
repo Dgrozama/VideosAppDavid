@@ -2,32 +2,40 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Model;
 
 class Video extends Model
 {
-    use HasFactory;
+    protected $table = 'videos';
 
-    protected $fillable = ['title', 'description', 'url', 'published_at', 'previous', 'next', 'series_id'];
-
-    protected $casts = [
-        'published_at' => 'datetime',
+    protected $fillable = [
+        'title',
+        'description',
+        'url',
+        'published_at',
+        'previous',
+        'next',
+        'series_id',
     ];
 
-    public function getFormattedPublishedAtAttribute(): ?string
-    {
-        return $this->published_at instanceof Carbon ? $this->published_at->locale('ca')->translatedFormat('d \d\e F \d\e Y') : null;
+    function getFormattedPublishedAtAttibute(){
+        return Carbon::parse($this->published_at)->format('d m Y');
     }
 
-    public function getFormattedForHumansPublishedAtAttribute(): ?string
-    {
-        return $this->published_at instanceof Carbon ? $this->published_at->diffForHumans() : null;
+    function getFormattedForHumansPublishedAtAttribute(){
+        return Carbon::parse($this->published_at)->diffForHumans();
     }
 
-    public function getPublishedAtTimestampAttribute(): ?int
+    function getPublishedAtTimestampAttribute(){
+        return Carbon::parse($this->published_at)->timestamp;
+    }
+
+    public function getFormattedPublishedAtDate()
     {
-        return $this->published_at instanceof Carbon ? $this->published_at->timestamp : null;
+        if ($this->published_at) {
+            return date('d/m/Y H:i', strtotime($this->published_at));
+        }
+        return 'No publicada';
     }
 }

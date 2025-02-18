@@ -11,4 +11,3 @@ parameters:
        analyse:
            - storage/*
            - bootstrap/cache/*
-   treatPhpDocTypesAsCertain: false

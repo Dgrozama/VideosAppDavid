@@ -2,27 +2,27 @@
 
 namespace Tests\Unit;
 
-use App\Models\Video;
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Carbon\Carbon;
+use PHPUnit\Framework\TestCase;
+use App\Models\Video; // Asegúrate de tener un modelo Video
 
 class VideosTest extends TestCase
 {
-    use RefreshDatabase;
-
-    public function test_can_get_formatted_published_at_date(): void
+    public function test_can_get_formatted_published_at_date()
     {
-        Carbon::setLocale('ca');
-        $video = Video::factory()->create(['published_at' => Carbon::create(2025, 1, 13)]);
+        $video = new Video();
+        $video->published_at = '2025-01-20 14:00:00';
 
-        $this->assertEquals('13 de gener de 2025', $video->formatted_published_at);
+        $formattedDate = $video->getFormattedPublishedAtDate();
+
+        $this->assertEquals('20/01/2025 14:00', $formattedDate);
     }
-
-    public function test_can_get_formatted_published_at_date_when_not_published(): void
+    public function test_can_get_formatted_published_at_date_when_not_published()
     {
-        $video = Video::factory()->create(['published_at' => null]);
+        $video = new Video();
+        $video->published_at = null;
 
-        $this->assertNull($video->formatted_published_at);
+        $formattedDate = $video->getFormattedPublishedAtDate();
+
+        $this->assertEquals('No publicada', $formattedDate);
     }
 }

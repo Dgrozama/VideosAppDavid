@@ -8,42 +8,69 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
+use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
+use Spatie\Permission\Traits\HasRoles;
+use Tests\Unit\HelperTest;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
-
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'team_id',
-    ];
-
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
-
     use HasApiTokens;
 
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory;
     use HasProfilePhoto;
+    use HasTeams;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    use HasRoles;
 
+    public mixed $ownedTeams;
+    public mixed $id;
 
+    public function isSuperAdmin(): bool
+    {
+        return $this->super_admin === true;
+    }
+
+    public function testedBy()
+    {
+        return HelperTest::class;
+    }
 
     /**
+     * The attributes that are mass assignable.
+     *
      * @var list<string>
      */
-    protected $appends = [/*'custom_field'*/];
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'current_team_id',
+        'super_admin'
+    ];
+
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var list<string>
+     */
+    protected $hidden = [
+        'password',
+        'remember_token',
+        'two_factor_recovery_codes',
+        'two_factor_secret',
+    ];
+
+    /**
+     * The accessors to append to the model's array form.
+     *
+     * @var list<string>
+     */
+    protected $appends = [
+//        'profile_photo_url',
+    ];
 
     /**
      * Get the attributes that should be cast.
@@ -57,9 +84,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-    public function team()
+
+    public function team(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(Team::class);
+        return $this->belongsTo(Team::class, 'current_team_id');
     }
+
+
 
 }
