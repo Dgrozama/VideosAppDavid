@@ -142,6 +142,7 @@
       <path value="$PROJECT_DIR$/vendor/league/uri-interfaces" />
       <path value="$PROJECT_DIR$/vendor/staabm/side-effects-detector" />
       <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -156,9 +157,11 @@
   "keyToString": {
     "Database Script.database.sqlite.executor": "Run",
     "PHPUnit.UserHelperTest.test_create_default_videos.executor": "Run",
+    "PHPUnit.UserTest.executor": "Run",
+    "PHPUnit.UserTest.test_is_super_admin_function.executor": "Run",
     "PHPUnit.VideosTest.test_can_get_formatted_published_at_date_when_not_published.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/alumnat/VideosAppDavid/resources/views/components/layouts",
+    "last_opened_file_path": "/home/alumnat/Documents/MP13/Repo-AplicacioSaaS-P2G2/Repo-AplicacioSaaS-P2G2/g2app",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -180,7 +183,7 @@
       <recent name="$PROJECT_DIR$/resources/views/components/layouts" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.VideosTest.test_can_get_formatted_published_at_date_when_not_published">
+  <component name="RunManager" selected="PHPUnit.UserTest">
     <configuration name="database.sqlite" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/database/database.sqlite" />
       <script-mode>FILE</script-mode>
@@ -195,12 +198,22 @@
       <TestRunner class="Tests\Unit\UserHelperTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/UserHelperTest.php" method="test_create_default_videos" scope="Method" />
       <method v="2" />
     </configuration>
+    <configuration name="UserTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\UserTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/UserTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UserTest.test_is_super_admin_function" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\UserTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/UserTest.php" method="test_is_super_admin_function" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="VideosTest.test_can_get_formatted_published_at_date_when_not_published" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Unit\VideosTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/VideosTest.php" method="test_can_get_formatted_published_at_date_when_not_published" scope="Method" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.UserTest" />
+        <item itemvalue="PHPUnit.UserTest.test_is_super_admin_function" />
         <item itemvalue="PHPUnit.VideosTest.test_can_get_formatted_published_at_date_when_not_published" />
         <item itemvalue="PHPUnit.UserHelperTest.test_create_default_videos" />
         <item itemvalue="Database Script.database.sqlite" />
@@ -231,7 +244,15 @@
       <workItem from="1737641659905" duration="2907000" />
       <workItem from="1737729392788" duration="7420000" />
       <workItem from="1737999581489" duration="4803000" />
-      <workItem from="1738073652707" duration="3073000" />
+      <workItem from="1738073652707" duration="3707000" />
+      <workItem from="1738090554783" duration="5000" />
+      <workItem from="1738246817367" duration="2665000" />
+      <workItem from="1738694868472" duration="8000" />
+      <workItem from="1739456474150" duration="839000" />
+      <workItem from="1739457321251" duration="11000" />
+      <workItem from="1739457333620" duration="54000" />
+      <workItem from="1739457388737" duration="4871000" />
+      <workItem from="1739814022915" duration="114000" />
     </task>
     <servers />
   </component>

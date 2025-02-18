@@ -40,5 +40,7 @@ return array(
     'ce9671a430e4846b44e1c68c7611f9f5' => $vendorDir . '/mockery/mockery/library/Mockery.php',
     'a1cfe24d14977df6878b9bf804af2d1c' => $vendorDir . '/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php',
     'ec07570ca5a812141189b1fa81503674' => $vendorDir . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
-    '8a8568db7d9147d86a7186d4a9698448' => $baseDir . '/app/Helpers/VideoHelper.php',
+    '377b22b161c09ed6e5152de788ca020a' => $vendorDir . '/spatie/laravel-permission/src/helpers.php',
+    '65deeb3592fb32f82ac543736610ebd8' => $baseDir . '/app/Helpers/UserHelper.php',
+    'feaddd2d92ef80afa94cb778100cd27c' => $baseDir . '/app/Helpers/DefaultVideoHelper.php',
 );
