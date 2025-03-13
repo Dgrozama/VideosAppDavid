@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Helpers\DefaultVideoHelper;
 use App\Models\Video;
+use Illuminate\Support\Facades\Gate;
 use Tests\Unit\VideosTest;
+
+
 
 class VideosController extends Controller
 {
@@ -22,5 +25,21 @@ class VideosController extends Controller
         }
 
         return view('videos.show', compact('video'));
+    }
+
+
+    public function manage()
+    {
+        if (!auth()->user()->can('manage-videos')) {
+            return view('videos.manage');
+        }
+        abort(404, 'Unauthorized');
+    }
+
+    public function index()
+    {
+        $videos = Video::all();
+
+        return view('videos.index', compact('videos'));
     }
 }
