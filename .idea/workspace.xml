@@ -138,11 +138,11 @@
       <path value="$PROJECT_DIR$/vendor/phpstan/phpstan" />
       <path value="$PROJECT_DIR$/vendor/nunomaduro/larastan" />
       <path value="$PROJECT_DIR$/vendor/phpmyadmin/sql-parser" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/staabm/side-effects-detector" />
       <path value="$PROJECT_DIR$/vendor/league/uri" />
       <path value="$PROJECT_DIR$/vendor/league/uri-interfaces" />
-      <path value="$PROJECT_DIR$/vendor/staabm/side-effects-detector" />
-      <path value="$PROJECT_DIR$/vendor/psr/cache" />
-      <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -153,70 +153,82 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Database Script.database.sqlite.executor": "Run",
-    "PHPUnit.UserHelperTest.test_create_default_videos.executor": "Run",
-    "PHPUnit.UserTest.executor": "Run",
-    "PHPUnit.UserTest.test_is_super_admin_function.executor": "Run",
-    "PHPUnit.VideosTest.test_can_get_formatted_published_at_date_when_not_published.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/alumnat/Documents/MP13/Repo-AplicacioSaaS-P2G2/Repo-AplicacioSaaS-P2G2/g2app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Database Script.database.sqlite.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.UserHelperTest.test_create_default_videos.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.UserTest.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.UserTest.test_is_super_admin_function.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_destroy_videos.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_manage_videos.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_see_add_videos.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_see_edit_videos.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_store_videos.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_update_videos.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_destroy_videos.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_see_add_videos.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_see_edit_videos.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_store_videos.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_update_videos.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.VideosTest.test_can_get_formatted_published_at_date_when_not_published.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.VideosTest.test_not_logged_users_can_see_default_videos_page.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.VideosTest.test_user_with_permissions_can_see_default_videos_page.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.VideosTest.test_user_without_permissions_can_see_default_videos_page.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/alumnat/Documents/MP13/Repo-AplicacioSaaS-P2G2/Repo-AplicacioSaaS-P2G2/g2app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ],
-    "RunConfigurationTargetLRU": [
-      "ce766ca3-85a5-4731-9c59-51c6e7a42e69"
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;ce766ca3-85a5-4731-9c59-51c6e7a42e69&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/components/layouts" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.UserTest">
-    <configuration name="database.sqlite" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/database/database.sqlite" />
-      <script-mode>FILE</script-mode>
-      <data-source id="ce766ca3-85a5-4731-9c59-51c6e7a42e69" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_update_videos">
     <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
       <method v="2" />
     </configuration>
-    <configuration name="UserHelperTest.test_create_default_videos" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\UserHelperTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/UserHelperTest.php" method="test_create_default_videos" scope="Method" />
+    <configuration name="VideosManageControllerTest.test_user_with_permissions_can_see_edit_videos" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Videos\VideosManageControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Videos/VideosManageControllerTest.php" method="test_user_with_permissions_can_see_edit_videos" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UserTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\UserTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/UserTest.php" scope="Class" />
+    <configuration name="VideosManageControllerTest.test_user_with_permissions_can_update_videos" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Videos\VideosManageControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Videos/VideosManageControllerTest.php" method="test_user_with_permissions_can_update_videos" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UserTest.test_is_super_admin_function" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\UserTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/UserTest.php" method="test_is_super_admin_function" scope="Method" />
+    <configuration name="VideosManageControllerTest.test_user_without_permissions_cannot_destroy_videos" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Videos\VideosManageControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Videos/VideosManageControllerTest.php" method="test_user_without_permissions_cannot_destroy_videos" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="VideosTest.test_can_get_formatted_published_at_date_when_not_published" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\VideosTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/VideosTest.php" method="test_can_get_formatted_published_at_date_when_not_published" scope="Method" />
+    <configuration name="VideosManageControllerTest.test_user_without_permissions_cannot_see_edit_videos" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Videos\VideosManageControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Videos/VideosManageControllerTest.php" method="test_user_without_permissions_cannot_see_edit_videos" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="VideosManageControllerTest.test_user_without_permissions_cannot_update_videos" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Videos\VideosManageControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Videos/VideosManageControllerTest.php" method="test_user_without_permissions_cannot_update_videos" scope="Method" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.UserTest" />
-        <item itemvalue="PHPUnit.UserTest.test_is_super_admin_function" />
-        <item itemvalue="PHPUnit.VideosTest.test_can_get_formatted_published_at_date_when_not_published" />
-        <item itemvalue="PHPUnit.UserHelperTest.test_create_default_videos" />
-        <item itemvalue="Database Script.database.sqlite" />
+        <item itemvalue="PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_update_videos" />
+        <item itemvalue="PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_update_videos" />
+        <item itemvalue="PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_see_edit_videos" />
+        <item itemvalue="PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_see_edit_videos" />
+        <item itemvalue="PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_destroy_videos" />
       </list>
     </recent_temporary>
   </component>
@@ -253,6 +265,10 @@
       <workItem from="1739457333620" duration="54000" />
       <workItem from="1739457388737" duration="4871000" />
       <workItem from="1739814022915" duration="114000" />
+      <workItem from="1739902149951" duration="3286000" />
+      <workItem from="1740671047040" duration="1234000" />
+      <workItem from="1741112387054" duration="5000" />
+      <workItem from="1741875560552" duration="8579000" />
     </task>
     <servers />
   </component>

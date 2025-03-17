@@ -6,7 +6,7 @@ parameters:
    paths:
        - app
        - database
-   level: 5
+   level: 0
    excludePaths:
        analyse:
            - storage/*

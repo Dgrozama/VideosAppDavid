@@ -5,11 +5,18 @@ namespace Tests\Feature\Videos;
 use Carbon\Carbon;
 use Tests\TestCase;
 use App\Models\Video;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class VideosTest extends TestCase
 {
     use RefreshDatabase;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+        create_permissions();
+    }
 
     public function test_users_can_view_videos()
     {
@@ -36,5 +43,38 @@ class VideosTest extends TestCase
 
         // Verificar que se obtiene un error 404
         $response->assertStatus(404);
+    }
+
+    // Test per a usuaris sense permisos
+    public function test_user_without_permissions_can_see_default_videos_page()
+    {
+        // Crear un usuari sense permisos específics
+        $user = User::factory()->create();
+
+        // Realitzar una petició GET a la pàgina per defecte de vídeos
+        $response = $this->actingAs($user)->get(route('videos.index'));
+
+        // Verificar que l'usuari pot veure la pàgina de vídeos
+        $response->assertStatus(200);
+        $response->assertSee('Videos');
+    }
+
+    public function test_user_with_permissions_can_see_default_videos_page()
+    {
+        $user = User::factory()->create();
+        $user->givePermissionTo('manage videos');
+
+        $response = $this->actingAs($user)->get(route('videos.index'));
+
+        $response->assertStatus(200);
+        $response->assertSee('Videos');
+    }
+
+    public function test_not_logged_users_can_see_default_videos_page()
+    {
+        $response = $this->get(route('videos.index'));
+
+        $response->assertStatus(200);
+        $response->assertSee('Videos');
     }
 }
