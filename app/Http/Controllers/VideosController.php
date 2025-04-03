@@ -28,13 +28,6 @@ class VideosController extends Controller
     }
 
 
-    public function manage()
-    {
-        if (!auth()->user()->can('manage-videos')) {
-            return view('videos.manage');
-        }
-        abort(404, 'Unauthorized');
-    }
 
     public function index()
     {

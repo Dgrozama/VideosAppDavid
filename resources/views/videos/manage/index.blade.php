@@ -1,8 +1,6 @@
-<!-- resources/views/videos/manage.blade.php -->
 <x-videos-app-layout>
     <div class="container">
         <h1>Gestió de Vídeos</h1>
-
         <!-- Botó destacat per crear vídeo -->
         <a href="{{ route('videos.manage.create') }}" class="btn btn-create-video mb-3">Crear Vídeo</a>
 
@@ -58,21 +56,18 @@
             padding: 40px;
             background-color: #f9f9f9;
             border-radius: 8px;
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
         h1 {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 600;
             color: #333;
             margin-bottom: 20px;
-            text-align: center;
         }
 
         /* Estil per al botó de crear vídeo */
         .btn-create-video {
-            background-color: #ff0000;
+            background-color: #28a745;
             color: white;
             font-size: 16px;
             font-weight: 600;
@@ -80,12 +75,10 @@
             border-radius: 5px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, background-color 0.3s ease;
-            display: block;
-            width: 100%;
         }
 
         .btn-create-video:hover {
-            background-color: #c70000;
+            background-color: #218838;
             transform: scale(1.05);
         }
 
@@ -94,8 +87,6 @@
             padding: 10px;
             background-color: #d4edda;
             color: #155724;
-            margin-bottom: 20px;
-            border-radius: 5px;
         }
 
         /* Taula i estil de les cel·les */
@@ -107,15 +98,13 @@
         }
 
         .table th {
-            background-color: #333;
+            background-color: #0069d9;
             color: white;
             font-weight: 600;
-            text-align: center;
         }
 
         .table td {
             padding: 12px 15px;
-            text-align: center;
         }
 
         .table-striped tbody tr:nth-of-type(odd) {
@@ -166,7 +155,7 @@
             .table {
                 font-size: 12px;
             }
-            .btn-warning, .btn-danger, .btn-primary {
+            .btn-primary, .btn-warning, .btn-danger {
                 font-size: 12px;
                 padding: 6px 12px;
             }

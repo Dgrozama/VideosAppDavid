@@ -4,7 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ea3409f-d35f-4d19-af67-046c565798b7" name="Changes" comment="" />
+    <list default="true" id="1ea3409f-d35f-4d19-af67-046c565798b7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/DefaultVideoHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/DefaultVideoHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/UserHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/UserHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/VideoHelper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VideosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VideosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VideosManageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VideosManageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Video.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Video.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_11_25_145822_add_two_factor_columns_to_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_11_25_145830_create_personal_access_tokens_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_11_25_153543_create_teams_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpstan.neon" beforeDir="false" afterPath="$PROJECT_DIR$/phpstan.neon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/markdown/terms.md" beforeDir="false" afterPath="$PROJECT_DIR$/resources/markdown/terms.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/videos-app-layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/videos-app-layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/videos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/videos/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/videos/manage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/videos/manage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/videos/manage/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/videos/manage/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/videos/manage/delete.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/videos/manage/delete.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/videos/manage/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/videos/manage/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/videos/manage/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/videos/manage/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/videos/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/videos/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Videos/VideosManageControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Videos/VideosManageControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/VideosTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/VideosTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/HelperTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/HelperTest.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +43,9 @@
     <execution>
       <executable path="composer" />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/bin/php">
     <include_path>
@@ -153,65 +184,67 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Database Script.database.sqlite.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.UserHelperTest.test_create_default_videos.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.UserTest.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.UserTest.test_is_super_admin_function.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_destroy_videos.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_manage_videos.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_see_add_videos.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_see_edit_videos.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_store_videos.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_update_videos.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_destroy_videos.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_see_add_videos.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_see_edit_videos.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_store_videos.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_update_videos.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.VideosTest.test_can_get_formatted_published_at_date_when_not_published.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.VideosTest.test_not_logged_users_can_see_default_videos_page.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.VideosTest.test_user_with_permissions_can_see_default_videos_page.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.VideosTest.test_user_without_permissions_can_see_default_videos_page.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/alumnat/Documents/MP13/Repo-AplicacioSaaS-P2G2/Repo-AplicacioSaaS-P2G2/g2app&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Database Script.database.sqlite.executor": "Run",
+    "PHPUnit.UserHelperTest.test_create_default_videos.executor": "Run",
+    "PHPUnit.UserManageTest.executor": "Run",
+    "PHPUnit.UserTest.executor": "Run",
+    "PHPUnit.UserTest.test_is_super_admin_function.executor": "Run",
+    "PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_destroy_videos.executor": "Run",
+    "PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_manage_videos.executor": "Run",
+    "PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_see_add_videos.executor": "Run",
+    "PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_see_edit_videos.executor": "Run",
+    "PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_store_videos.executor": "Run",
+    "PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_update_videos.executor": "Run",
+    "PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_destroy_videos.executor": "Run",
+    "PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_see_add_videos.executor": "Run",
+    "PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_see_edit_videos.executor": "Run",
+    "PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_store_videos.executor": "Run",
+    "PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_update_videos.executor": "Run",
+    "PHPUnit.VideosTest.test_can_get_formatted_published_at_date_when_not_published.executor": "Run",
+    "PHPUnit.VideosTest.test_not_logged_users_can_see_default_videos_page.executor": "Run",
+    "PHPUnit.VideosTest.test_user_with_permissions_can_see_default_videos_page.executor": "Run",
+    "PHPUnit.VideosTest.test_user_without_permissions_can_see_default_videos_page.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/alumnat/Documents/VideosAppDavid",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
     ],
-    &quot;RunConfigurationTargetLRU&quot;: [
-      &quot;ce766ca3-85a5-4731-9c59-51c6e7a42e69&quot;
+    "RunConfigurationTargetLRU": [
+      "ce766ca3-85a5-4731-9c59-51c6e7a42e69"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/components/layouts" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_update_videos">
+  <component name="RunManager" selected="PHPUnit.UserManageTest">
     <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
       <method v="2" />
     </configuration>
-    <configuration name="VideosManageControllerTest.test_user_with_permissions_can_see_edit_videos" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Videos\VideosManageControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Videos/VideosManageControllerTest.php" method="test_user_with_permissions_can_see_edit_videos" scope="Method" />
+    <configuration name="UserManageTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Users\UserManageTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Users/UserManageTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UserTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Users\UserTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Users/UserTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="VideosManageControllerTest.test_user_with_permissions_can_update_videos" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\Videos\VideosManageControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Videos/VideosManageControllerTest.php" method="test_user_with_permissions_can_update_videos" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="VideosManageControllerTest.test_user_without_permissions_cannot_destroy_videos" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Videos\VideosManageControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Videos/VideosManageControllerTest.php" method="test_user_without_permissions_cannot_destroy_videos" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="VideosManageControllerTest.test_user_without_permissions_cannot_see_edit_videos" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -224,11 +257,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.UserManageTest" />
+        <item itemvalue="PHPUnit.UserTest" />
         <item itemvalue="PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_update_videos" />
         <item itemvalue="PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_update_videos" />
         <item itemvalue="PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_see_edit_videos" />
-        <item itemvalue="PHPUnit.VideosManageControllerTest.test_user_with_permissions_can_see_edit_videos" />
-        <item itemvalue="PHPUnit.VideosManageControllerTest.test_user_without_permissions_cannot_destroy_videos" />
       </list>
     </recent_temporary>
   </component>
@@ -269,6 +302,7 @@
       <workItem from="1740671047040" duration="1234000" />
       <workItem from="1741112387054" duration="5000" />
       <workItem from="1741875560552" duration="8579000" />
+      <workItem from="1743686448360" duration="6963000" />
     </task>
     <servers />
   </component>

@@ -59,21 +59,28 @@ class VideosTest extends TestCase
         $response->assertSee('Videos');
     }
 
+    // Test per a usuaris amb permisos
     public function test_user_with_permissions_can_see_default_videos_page()
     {
+        // Crear un usuari amb permisos per gestionar vídeos
         $user = User::factory()->create();
-        $user->givePermissionTo('manage videos');
+        $user->givePermissionTo('manage videos'); // Assignar permís per gestionar vídeos
 
+        // Realitzar una petició GET a la pàgina per defecte de vídeos
         $response = $this->actingAs($user)->get(route('videos.index'));
 
+        // Verificar que l'usuari pot veure la pàgina de vídeos
         $response->assertStatus(200);
         $response->assertSee('Videos');
     }
 
+    // Test per a usuaris no autenticats
     public function test_not_logged_users_can_see_default_videos_page()
     {
+        // Realitzar una petició GET a la pàgina per defecte de vídeos sense estar loguejat
         $response = $this->get(route('videos.index'));
 
+        // Verificar que la resposta és exitosa i l'usuari no ha d'estar autenticat
         $response->assertStatus(200);
         $response->assertSee('Videos');
     }

@@ -32,11 +32,15 @@ class VideosManageController extends Controller
         return view('videos.manage.create');
     }
 
+    /**
+     * Store a newly created resource in storage.
+     */
     public function store(Request $request)
     {
         if (!auth()->user()->can('manage-videos')) {
             abort(403, 'Unauthorized');
         }
+
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'nullable|string',
@@ -44,8 +48,9 @@ class VideosManageController extends Controller
             'published_at' => 'required|date',
             'previous' => 'nullable|string',
             'next' => 'nullable|string',
-            'series_id' => 'nullable|integer|exists:series,id',
+            'series_id' => 'nullable|integer|exists:series,id', // si tienes una tabla de series
         ]);
+
         $video = Video::create([
             'title' => $validated['title'],
             'description' => $validated['description'],
@@ -54,10 +59,15 @@ class VideosManageController extends Controller
             'previous' => $validated['previous'],
             'next' => $validated['next'],
             'series_id' => $validated['series_id'],
+            'user_id' => auth()->id(),
         ]);
+
         return redirect()->route('videos.manage.index')->with('success', 'Video created successfully');
     }
 
+    /**
+     * Display the specified resource.
+     */
     public function show(string $id)
     {
         if (!auth()->user()->can('manage-videos')) {
@@ -75,6 +85,9 @@ class VideosManageController extends Controller
         return view('videos.manage.show', compact('video'));
     }
 
+    /**
+     * Show the form for editing the specified resource.
+     */
     public function edit(string $id)
     {
         if (!auth()->user()->can('manage-videos')) {
@@ -92,6 +105,9 @@ class VideosManageController extends Controller
         return view('videos.manage.edit', compact('video'));
     }
 
+    /**
+     * Update the specified resource in storage.
+     */
     public function update(Request $request, string $id)
     {
         if (!auth()->user()->can('manage-videos')) {
@@ -113,7 +129,7 @@ class VideosManageController extends Controller
             'published_at' => 'required|date',
             'previous' => 'nullable|string',
             'next' => 'nullable|string',
-            'series_id' => 'nullable|integer|exists:series,id',
+            'series_id' => 'nullable|integer|exists:series,id', // si tienes una tabla de series
         ]);
 
         $video->update([
@@ -129,6 +145,9 @@ class VideosManageController extends Controller
         return redirect()->route('videos.manage.index')->with('success', 'Video updated successfully');
     }
 
+    /**
+     * Remove the specified resource from storage.
+     */
     public function destroy(string $id)
     {
         if (!auth()->user()->can('manage-videos')) {
@@ -148,4 +167,11 @@ class VideosManageController extends Controller
         return redirect()->route('videos.manage.index')->with('success', 'Video deleted successfully');
     }
 
+    /**
+     * Return the name of the test class.
+     */
+    public function testedBy()
+    {
+        return VideosManageControllerTest::class;
+    }
 }

@@ -50,8 +50,6 @@
             padding: 40px;
             background-color: #f9f9f9;
             border-radius: 8px;
-            max-width: 800px;
-            margin: 0 auto;
         }
 
         h1 {
@@ -59,7 +57,6 @@
             font-weight: 600;
             color: #333;
             margin-bottom: 20px;
-            text-align: center;
         }
 
         /* Estil per als inputs i formularis */
@@ -89,8 +86,6 @@
             border-radius: 5px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, background-color 0.3s ease;
-            display: block;
-            width: 100%;
         }
 
         .btn-edit-video:hover {
@@ -98,11 +93,25 @@
             transform: scale(1.05);
         }
 
+        /* Estils per la taula i elements del formulari */
         .form-group label {
             font-weight: 600;
             font-size: 14px;
             color: #333;
             margin-bottom: 8px;
+        }
+
+        .btn-warning {
+            background-color: #ffc107;
+            color: white;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-warning:hover {
+            background-color: #e0a800;
         }
 
         /* Mida màxima per a dispositius més petits */
@@ -111,7 +120,7 @@
                 padding: 20px;
             }
 
-            .btn-edit-video {
+            .btn-edit-video, .btn-warning {
                 font-size: 14px;
                 padding: 10px 15px;
             }

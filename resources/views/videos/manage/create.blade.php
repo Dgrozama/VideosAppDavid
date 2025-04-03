@@ -49,16 +49,13 @@
             padding: 40px;
             background-color: #f9f9f9;
             border-radius: 8px;
-            max-width: 800px;
-            margin: 0 auto;
         }
 
         h1 {
-            font-size: 26px;
+            font-size: 24px;
             font-weight: 600;
             color: #333;
             margin-bottom: 20px;
-            text-align: center;
         }
 
         /* Estil per als inputs i formularis */
@@ -68,7 +65,7 @@
 
         .form-control {
             font-size: 14px;
-            padding: 12px;
+            padding: 10px;
             border-radius: 5px;
             border: 1px solid #ccc;
             transition: border-color 0.3s ease;
@@ -76,7 +73,6 @@
 
         .form-control:focus {
             border-color: #0069d9;
-            box-shadow: 0 0 5px rgba(0, 105, 217, 0.5);
         }
 
         /* Estil per al botó de crear vídeo */
@@ -89,8 +85,6 @@
             border-radius: 5px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, background-color 0.3s ease;
-            display: block;
-            width: 100%;
         }
 
         .btn-create-video:hover {
@@ -106,20 +100,33 @@
             margin-bottom: 8px;
         }
 
+        .btn-success {
+            background-color: #28a745;
+            color: white;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
         /* Mida màxima per a dispositius més petits */
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
             }
 
-            .btn-create-video {
+            .btn-create-video, .btn-success {
                 font-size: 14px;
                 padding: 10px 15px;
             }
 
             .form-control {
                 font-size: 12px;
-                padding: 10px;
+                padding: 8px;
             }
         }
     </style>

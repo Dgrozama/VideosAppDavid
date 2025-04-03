@@ -1,25 +1,22 @@
 <x-videos-app-layout>
     <div class="video-container">
-        <h1 class="video-title">{{ $video['title'] }}</h1>
-        <p class="video-description">{{ $video['description'] }}</p>
-
+        <h1 class="video-title">Títol: {{ $video['title'] }}</h1>
+        <p class="video-description">Descripció: {{ $video['description'] }}</p>
         <div class="video-frame">
             <iframe
-                src="{{ $video['url'] }}?autoplay=0"
-                width="100%"
-                height="500"
+                src="{{ $video['url'] }}"
+                width="800"
+                height="450"
                 frameborder="0"
                 allowfullscreen>
             </iframe>
         </div>
-
         <a href="{{ $video['url'] }}" target="_blank" class="video-link">Mira el vídeo en una nova finestra</a>
-
         <ul class="video-info">
-            <li><strong>Data de publicació:</strong> {{ $video['published_at'] }}</li>
-            <li><strong>Anterior vídeo:</strong> {{ $video['previous'] }}</li>
-            <li><strong>Següent vídeo:</strong> {{ $video['next'] }}</li>
-            <li><strong>ID de la sèrie:</strong> {{ $video['series_id'] }}</li>
+            <li>Data de publicació: {{ $video['published_at'] }}</li>
+            <li>Anterior vídeo: {{ $video['previous'] }}</li>
+            <li>Següent vídeo: {{ $video['next'] }}</li>
+            <li>ID de la sèrie: {{ $video['series_id'] }}</li>
         </ul>
     </div>
 </x-videos-app-layout>
@@ -27,17 +24,16 @@
 <style>
     .video-container {
         max-width: 900px;
-        margin: 30px auto;
+        margin: 0 auto;
         padding: 20px;
-        background-color: #fff;
+        background-color: #f9f9f9;
         border: 1px solid #ddd;
         border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     .video-title {
-        font-size: 26px;
-        font-weight: 600;
+        font-size: 24px;
+        font-weight: bold;
         margin-bottom: 10px;
         color: #333;
     }
@@ -45,7 +41,7 @@
     .video-description {
         font-size: 16px;
         margin-bottom: 20px;
-        color: #666;
+        color: #555;
     }
 
     .video-frame {
@@ -55,33 +51,29 @@
 
     .video-link {
         display: inline-block;
-        padding: 10px 20px;
-        background-color: #cc0000;
+        margin-bottom: 20px;
+        padding: 10px 15px;
+        background-color: #007bff;
         color: #fff;
         text-decoration: none;
         border-radius: 4px;
         font-size: 14px;
-        margin-bottom: 20px;
-        transition: background-color 0.2s ease;
     }
 
     .video-link:hover {
-        background-color: #990000;
+        background-color: #0056b3;
     }
 
     .video-info {
         list-style-type: none;
         padding: 0;
         margin: 0;
-        color: #555;
     }
 
     .video-info li {
         font-size: 14px;
-        margin-bottom: 8px;
+        margin-bottom: 5px;
+        color: #666;
     }
 
-    .video-info li strong {
-        font-weight: 600;
-    }
 </style>

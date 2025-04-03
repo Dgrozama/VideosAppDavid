@@ -15,8 +15,8 @@
         }
 
         .app-header-title {
-            font-size: 26px;
-            font-weight: 700;
+            font-size: 24px;
+            font-weight: bold;
             margin: 0;
             letter-spacing: 1px;
         }
@@ -24,7 +24,7 @@
         /* Navbar Styles */
         .navbar {
             background-color: #444;
-            padding: 12px 0;
+            padding: 10px 0;
         }
 
         .navbar-nav {
@@ -36,32 +36,25 @@
 
         .navbar-nav li {
             display: inline;
-            margin: 0 20px;
+            margin: 0 15px;
         }
 
         .navbar-nav a {
             color: #fff;
             text-decoration: none;
             font-size: 16px;
-            font-weight: 500;
-            transition: color 0.2s ease;
+            font-weight: bold;
         }
 
         .navbar-nav a:hover {
-            color: #ff0000; /* Canviar a color més destacat */
             text-decoration: underline;
-        }
-
-        /* Main Content Styles */
-        main {
-            padding: 20px;
         }
 
         /* Footer Styles */
         .app-footer {
             background-color: #f8f9fa;
             color: #555;
-            padding: 20px;
+            padding: 10px 20px;
             text-align: center;
             border-top: 1px solid #ddd;
             margin-top: 30px;
@@ -71,18 +64,6 @@
             font-size: 14px;
             margin: 0;
             color: #666;
-        }
-
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            .navbar-nav li {
-                display: block;
-                margin: 10px 0;
-            }
-
-            .app-header-title {
-                font-size: 22px;
-            }
         }
     </style>
     @vite('resources/css/app.css')
@@ -95,6 +76,7 @@
 <!-- Navbar -->
 <nav class="navbar">
     <ul class="navbar-nav">
+        <li><a href="{{ route('users.manage.index') }}">Gestió de Usuaris</a></li>
         <li><a href="{{ route('videos.manage.index') }}">Gestió de Vídeos</a></li>
         <li><a href="{{ route('videos.index') }}">Inici</a></li>
     </ul>
@@ -105,7 +87,7 @@
 </main>
 
 <footer class="app-footer">
-    <p class="app-footer-text">&copy; {{ date('Y') }} Videos App - David Groza</p>
+    <p class="app-footer-text">&copy; {{ date('Y') }} | David Groza</p>
 </footer>
 </body>
 </html>
