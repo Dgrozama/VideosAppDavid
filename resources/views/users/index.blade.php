@@ -3,7 +3,7 @@
     <div class="container">
         <h1>Llista d'Usuaris</h1>
 
-        <form method="GET" action="{{ route('users.index') }}" class="search-form">
+        <form method="GET" action="{{ route('users.index') }}" class="search-form mb-3">
             <div class="search-bar">
                 <input type="text" name="search" class="search-input" placeholder="Cerca un usuari..." value="{{ request('search') }}">
                 <button type="submit" class="search-btn">
@@ -25,7 +25,7 @@
                     <div class="user-info">
                         <h5 class="user-name">{{ $user->name }}</h5>
                         <p class="user-email">{{ $user->email }}</p>
-                        <a href="{{ route('users.show', $user->id) }}" class="btn btn-info">Veure Detall</a>
+                        <a href="{{ route('users.show', $user->id) }}" class="btn btn-info btn-sm">Veure Detall</a>
                     </div>
                 </div>
             @endforeach
@@ -34,97 +34,88 @@
         {{ $users->links() }}
     </div>
 
-    <!-- Estils CSS millorats -->
+    <!-- Estils CSS -->
     <style>
-        :root {
-            --primary-color: #007bff;
-            --primary-hover: #0056b3;
-            --bg-light: #f4f7fc;
-            --bg-white: #ffffff;
-            --text-dark: #333;
-            --text-gray: #555;
-            --border-radius: 10px;
-            --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
         .container {
-            max-width: 900px;
-            margin: auto;
             padding: 40px;
-
+            background-color: #f9f9f9;
+            border-radius: 8px;
         }
 
         h1 {
-            font-size: 26px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 25px;
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
         }
 
         .search-form {
-            max-width: 500px;
-            margin: 0 auto 20px;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .search-bar {
+            position: relative;
             display: flex;
             align-items: center;
-            border-radius: 50px;
-            padding: 8px 15px;
+            width: 100%;
+            border-radius: 24px;
+            overflow: hidden;
+            background-color: #f1f1f1;
         }
 
         .search-input {
-            flex-grow: 1;
-            padding: 10px;
+            width: 100%;
+            padding: 10px 20px;
             font-size: 16px;
             border: none;
-            background: transparent;
+            background-color: transparent;
             outline: none;
+            border-radius: 24px;
         }
 
         .search-btn {
+            position: absolute;
+            right: 10px;
+            background: transparent;
             border: none;
-            color: white;
-            font-size: 18px;
-            padding: 8px 12px;
-            border-radius: 50%;
+            color: #333;
+            font-size: 20px;
             cursor: pointer;
-            transition: background 0.3s ease;
         }
 
         .search-btn:hover {
+            color: #007bff;
         }
 
         .user-list {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         .user-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
             display: flex;
             align-items: center;
-            transition: transform 0.2s ease-in-out;
+            transition: transform 0.3s ease;
         }
 
         .user-card:hover {
-            transform: translateY(-5px);
+            transform: scale(1.05);
         }
 
         .user-avatar {
-            width: 65px;
-            height: 65px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             overflow: hidden;
-            margin-right: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            font-weight: bold;
-            text-transform: uppercase;
+            margin-right: 20px;
+            position: relative;
         }
 
         .avatar-img {
@@ -133,44 +124,68 @@
             object-fit: cover;
         }
 
+        .avatar-placeholder {
+            width: 100%;
+            height: 100%;
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
         .user-info {
             flex-grow: 1;
         }
 
         .user-name {
             font-size: 18px;
-            font-weight: bold;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
         }
 
         .user-email {
             font-size: 14px;
+            color: #555;
             margin-bottom: 10px;
         }
 
         .btn-info {
+            background-color: #007bff;
             color: white;
-            padding: 8px 14px;
+            padding: 6px 12px;
+            border-radius: 5px;
             font-size: 14px;
             text-decoration: none;
-            display: inline-block;
-            transition: background 0.3s ease;
+        }
+
+        .btn-info:hover {
+            background-color: #0056b3;
         }
 
         .pagination {
             justify-content: center;
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
+        /* Estilos Font Awesome para el icono de búsqueda */
+        .fa-search {
+            font-size: 18px;
+        }
+
+        /* Responsividad */
         @media (max-width: 768px) {
             .user-card {
                 flex-direction: column;
                 text-align: center;
-                padding: 15px;
             }
 
             .user-avatar {
                 margin-right: 0;
-                margin-bottom: 10px;
+                margin-bottom: 15px;
             }
 
             .search-bar {

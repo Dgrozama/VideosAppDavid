@@ -1,5 +1,4 @@
 <x-videos-app-layout>
-
     <div class="container">
         <h1>Gestió d'Usuaris</h1>
 
@@ -10,7 +9,7 @@
         <!-- Botó destacat per crear usuari -->
         <a href="{{ route('users.manage.create') }}" class="btn btn-create-user mb-3">Crear Usuari</a>
 
-        <!-- Taula responsive -->
+        <!-- Taula que ocupa tota l'amplada disponible -->
         <div class="table-responsive">
             <table class="table table-striped mt-3">
                 <thead>
@@ -18,6 +17,7 @@
                     <th>ID</th>
                     <th>Nom</th>
                     <th>Email</th>
+                    <th>Rol</th>
                     <th>Accions</th>
                 </tr>
                 </thead>
@@ -27,6 +27,8 @@
                         <td>{{ $user->id }}</td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
+                        <td>{{ $user->getRoleNames()->first() }}</td>
+
                         <td>
                             <a href="{{ route('users.manage.edit', $user) }}" class="btn btn-warning btn-sm">Editar</a>
                             <form action="{{ route('users.manage.destroy', $user) }}" method="POST" style="display:inline;">
@@ -42,79 +44,86 @@
         </div>
     </div>
 
-    <!-- Estils CSS corregits -->
+    <!-- Estils CSS -->
     <style>
         .container {
-            padding: 20px;
+            padding: 40px;
             background-color: #f9f9f9;
-            border-radius: 5px;
+            border-radius: 8px;
         }
 
         h1 {
-            font-size: 22px;
-            font-weight: bold;
+            font-size: 24px;
+            font-weight: 600;
             color: #333;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        /* Botó per crear usuari */
+        /* Estil per al botó de crear usuari */
         .btn-create-user {
             background-color: #007bff;
             color: white;
-            font-size: 14px;
-            padding: 10px 15px;
-            border-radius: 4px;
-            border: none;
-            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
         .btn-create-user:hover {
             background-color: #0056b3;
+            transform: scale(1.05);
         }
 
-        /* Missatge d'èxit */
         .alert {
             font-size: 14px;
-            padding: 8px;
+            padding: 10px;
             background-color: #d4edda;
             color: #155724;
-            border-left: 4px solid #28a745;
         }
 
-        /* Taula */
+        /* Taula i estil de les cel·les */
         .table {
-            width: 100%;
             background-color: white;
-            border-collapse: collapse;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             font-size: 14px;
-        }
-
-        .table th, .table td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
         }
 
         .table th {
-            background-color: #007bff;
+            background-color: #0069d9;
             color: white;
+            font-weight: 600;
         }
 
-        .table-striped tbody tr:nth-child(odd) {
-            background-color: #f8f9fa;
+        .table td {
+            padding: 12px 15px;
+        }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: #f9f9f9;
+        }
+
+        .table td a {
+            color: #0069d9;
+            text-decoration: none;
+        }
+
+        .table td a:hover {
+            text-decoration: underline;
         }
 
         .btn-warning, .btn-danger {
             font-size: 12px;
-            padding: 5px 10px;
+            padding: 6px 12px;
             border-radius: 4px;
-            border: none;
-            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
         .btn-warning {
             background-color: #ffc107;
-            color: black;
+            color: white;
         }
 
         .btn-warning:hover {
@@ -130,8 +139,9 @@
             background-color: #c82333;
         }
 
-        /* Taula responsive */
+        /* Estil per fer la taula més responsive */
         .table-responsive {
+            width: 100%;
             overflow-x: auto;
         }
 
@@ -139,11 +149,10 @@
             .table {
                 font-size: 12px;
             }
-            .btn-create-user, .btn-warning, .btn-danger {
+            .btn-primary, .btn-warning, .btn-danger {
                 font-size: 12px;
-                padding: 6px 10px;
+                padding: 6px 12px;
             }
         }
     </style>
-
 </x-videos-app-layout>

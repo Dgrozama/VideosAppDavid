@@ -30,9 +30,9 @@ class User extends Authenticatable
 
     use HasFactory;
 
-    public function videos(): \Illuminate\Database\Eloquent\Relations\HasMany
+    public function videos()
     {
-        return $this->hasMany(Video::class, 'user_id'); // Un usuari té molts vídeos
+        return $this->hasMany(Video::class, 'user_id');
     }
 
     public function isSuperAdmin(): bool

@@ -29,79 +29,79 @@
                 <input type="password" name="password" class="form-control" data-qa="input-password" required>
             </div>
 
+            <div class="form-group">
+                <label for="role">Rol</label>
+                <select name="role" class="form-control" required>
+                    @foreach($roles as $role)
+                        <option value="{{ $role->name }}">{{ ucfirst($role->name) }}</option>
+                    @endforeach
+                </select>
+            </div>
+
+
             <button type="submit" class="btn btn-create-user">Crear</button>
         </form>
     </div>
 
-    <!-- Estils CSS corregits -->
+    <!-- Estils CSS -->
     <style>
         .container {
-            padding: 20px;
+            padding: 40px;
             background-color: #f9f9f9;
-            border-radius: 5px;
-            max-width: 400px;
-            margin: auto;
+            border-radius: 8px;
         }
 
         h1 {
-            font-size: 22px;
-            font-weight: bold;
+            font-size: 24px;
+            font-weight: 600;
             color: #333;
-            margin-bottom: 15px;
-            text-align: center;
+            margin-bottom: 20px;
         }
 
-        /* Botó de crear usuari */
+        /* Estil per al botó de crear usuari */
         .btn-create-user {
             background-color: #007bff;
             color: white;
-            font-size: 14px;
-            font-weight: bold;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            width: 100%;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
         .btn-create-user:hover {
             background-color: #0056b3;
+            transform: scale(1.05);
         }
 
-        /* Alertes */
+        /* Estil per a l'alerta d'errors */
         .alert-danger {
             font-size: 14px;
-            padding: 8px;
+            padding: 10px;
             background-color: #f8d7da;
             color: #721c24;
-            border-radius: 4px;
-            margin-bottom: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
         }
 
-        /* Estils dels inputs */
+        /* Estil per als camps de formulari */
         .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            font-size: 14px;
-            color: #555;
-            display: block;
-            margin-bottom: 5px;
+            margin-bottom: 20px;
         }
 
         .form-control {
             font-size: 14px;
-            padding: 8px;
-            border-radius: 4px;
+            padding: 10px;
+            border-radius: 5px;
             border: 1px solid #ccc;
             width: 100%;
+            box-sizing: border-box;
         }
 
         .form-control:focus {
-            border-color: #0056b3;
-            outline: none;
+            border-color: #0069d9;
+            box-shadow: 0 0 8px rgba(0, 105, 217, 0.6);
         }
     </style>
 </x-videos-app-layout>

@@ -17,75 +17,84 @@
                 <input type="email" name="email" class="form-control input-edit" value="{{ $user->email }}" required>
             </div>
 
+            <div class="form-group">
+                <label for="role">Rol</label>
+                <select name="role" class="form-control" required>
+                    @foreach($roles as $role)
+                        <option value="{{ $role->name }}" {{ $user->hasRole($role->name) ? 'selected' : '' }}>
+                            {{ ucfirst($role->name) }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+
+
             <button type="submit" class="btn btn-update">Actualitzar</button>
         </form>
     </div>
 
-    <!-- Estils CSS corregits -->
+    <!-- Estils CSS -->
     <style>
         .container {
-            padding: 20px;
+            padding: 40px;
             background-color: #f9f9f9;
-            border-radius: 5px;
-            max-width: 500px;
-            margin: auto;
+            border-radius: 8px;
         }
 
         h1 {
-            font-size: 22px;
-            font-weight: bold;
+            font-size: 24px;
+            font-weight: 600;
             color: #333;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .form-group label {
-            font-size: 14px;
+            font-size: 16px;
             color: #555;
-            display: block;
-            margin-bottom: 5px;
         }
 
         .input-edit {
             font-size: 14px;
-            padding: 8px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            transition: border 0.3s ease;
         }
 
         .input-edit:focus {
-            border-color: #0056b3;
+            border-color: #0069d9;
             outline: none;
         }
 
         .btn-update {
             background-color: #007bff;
             color: white;
-            font-size: 14px;
-            font-weight: bold;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            width: 100%;
-            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            margin-top: 20px;
         }
 
         .btn-update:hover {
             background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Estil per als inputs */
+        .form-group {
+            margin-bottom: 20px;
         }
 
         .alert-danger {
             font-size: 14px;
-            padding: 8px;
+            padding: 10px;
             background-color: #f8d7da;
             color: #721c24;
-            border-radius: 4px;
-            margin-bottom: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
         }
     </style>
 

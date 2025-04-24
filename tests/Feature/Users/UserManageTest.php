@@ -18,16 +18,21 @@ class UserManageTest extends TestCase
 
     public function test_user_with_permissions_can_manage_users()
     {
+        // Crear 3 usuarios
         $user1 = User::factory()->create();
         $user2 = User::factory()->create();
         $user3 = User::factory()->create();
 
+        // Login como VideoManager
         $superAdmin = $this->loginAsSuperAdmin();
 
+        // Hacer la petición GET para acceder a la lista de usuarios
         $response = $this->actingAs($superAdmin)->get(route('users.manage.index'));
 
+        // Assert que la respuesta sea correcta
         $response->assertStatus(200);
 
+        // Verificar que los 3 usuarios están presentes en la vista
         $response->assertSee($user1->name);
         $response->assertSee($user2->name);
         $response->assertSee($user3->name);
@@ -39,7 +44,7 @@ class UserManageTest extends TestCase
 
         $response = $this->actingAs($regularUser)->get(route('users.manage.index'));
 
-        $response->assertStatus(403);
+        $response->assertStatus(403); // Forbidden
     }
 
     public function test_guest_users_cannot_manage_users()
@@ -73,24 +78,30 @@ class UserManageTest extends TestCase
 
         $response = $this->actingAs($regularUser)->get(route('users.manage.create'));
 
-        $response->assertStatus(403);
+        $response->assertStatus(403); // Forbidden
     }
 
     public function test_user_with_permissions_can_store_users()
     {
+        // Crear datos de un usuario de prueba
         $userData = [
-            'name' => 'NouUsuari',
-            'email' => 'nou@videosapp.com',
-            'password' => '123456789',
+            'name' => 'Nuevo Usuario',
+            'email' => 'nuevo@usuario.com',
+            'password' => 'password123',
+            'role' => 'super_admin', // Asignar rol de super_admin
         ];
 
+        // Login como VideoManager con permisos
         $superAdmin = $this->loginAsSuperAdmin();
 
+        // Hacer la petición POST para crear el usuario
         $response = $this->actingAs($superAdmin)->post(route('users.manage.store'), $userData);
 
+        // Assert que la respuesta sea correcta (redirige a la lista de usuarios)
         $response->assertStatus(302);
         $response->assertRedirect(route('users.manage.index'));
 
+        // Verificar que el usuario ha sido creado y existe en la base de datos
         $this->assertDatabaseHas('users', [
             'name' => $userData['name'],
             'email' => $userData['email'],
@@ -100,9 +111,9 @@ class UserManageTest extends TestCase
     public function test_user_without_permissions_cannot_store_users()
     {
         $userData = [
-            'name' => 'NouUsuari',
-            'email' => 'nou@videosapp.com',
-            'password' => '123456789',
+            'name' => 'Nuevo Usuario',
+            'email' => 'nuevo@usuario.com',
+            'password' => 'password123',
         ];
 
         $regularUser = $this->loginAsRegularUser();
@@ -180,6 +191,7 @@ class UserManageTest extends TestCase
             'name' => 'Nombre actualizado',
             'email' => 'actualizado@usuario.com',
             'password' => 'newpassword123',
+            'role' => 'super_admin',
         ]);
 
         $response->assertStatus(302);

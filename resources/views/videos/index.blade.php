@@ -5,12 +5,12 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card border-0 shadow-sm rounded" onclick="window.location='{{ route('videos.show', $video->id) }}'">
                         <!-- Miniatura com a imatge destacada -->
-                        <iframe class="card-img-top" width="100%" height="200" src="{{ $video->url }}?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="pointer-events: none;"></iframe>
+                        <iframe class="card-img-top" width="560" height="315" src="{{ $video->url }}?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="pointer-events: none;"></iframe>
 
                         <!-- Títol i descripció -->
                         <div class="card-body p-2">
-                            <h5 class="card-title text-truncate" style="font-size: 16px; font-weight: 700;">{{ $video->title }}</h5>
-                            <p class="card-text text-truncate" style="font-size: 14px; color: #606060;">{{ \Str::limit($video->description, 80) }}</p>
+                            <h5 class="card-title text-truncate" style="font-size: 14px; font-weight: 600;">{{ $video->title }}</h5>
+                            <p class="card-text text-truncate" style="font-size: 12px; color: #606060;">{{ \Str::limit($video->description, 60) }}</p>
                             <a href="{{ route('videos.show', $video->id) }}" class="btn btn-outline-primary btn-sm">Veure Detall</a>
                         </div>
                     </div>
@@ -21,12 +21,11 @@
 
     <!-- Estils CSS -->
     <style>
-        .container {
+        .container{
             padding: 50px;
         }
-
         .card-img-top {
-            height: 200px;
+            height: 180px;
             object-fit: cover;
             border-radius: 5px;
             cursor: pointer;
@@ -36,40 +35,39 @@
             border: none;
             display: flex;
             flex-direction: column;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease;
         }
 
         .card:hover {
             transform: scale(1.05);
-            box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
         }
 
         .card-body {
-            padding: 15px;
+            padding: 10px;
         }
 
         .card-title {
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 5px;
         }
 
         .card-text {
-            font-size: 14px;
+            font-size: 12px;
             color: #606060;
         }
 
         .btn-outline-primary {
-            border-color: #007bff;
-            color: #007bff;
-            font-size: 14px;
+            border-color: #0069d9;
+            color: #0069d9;
+            font-size: 12px;
         }
 
         .btn-outline-primary:hover {
-            background-color: #007bff;
+            background-color: #0069d9;
             color: #fff;
         }
 
@@ -108,11 +106,11 @@
             }
 
             .card-title {
-                font-size: 14px;
+                font-size: 13px;
             }
 
             .card-text {
-                font-size: 12px;
+                font-size: 11px;
             }
         }
     </style>
