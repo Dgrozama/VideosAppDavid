@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --dark-bg: #0d0d0d;
+    --dark-surface: #1a1a1a;
+    --dark-border: #292929;
+    --text-light: #f0f0f0;
+    --text-muted: #a6a6a6;
+    --accent: #e50914; /* Inspirat en Netflix */
+    --danger: #ff4c4c;
+    --success: #4caf50;
+    --highlight: #ffffff10;
+    --card-bg: #1f1f1f;
+    --hover-bg: #2a2a2a;
+    --transition: all 0.3s ease;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: var(--dark-surface);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+p, span, li {
+    color: var(--text-muted);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: #ff1f2d;
+}
+
+button {
+    font-family: inherit;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button:hover {
+    background-color: #cc0810;
+}
+
+input, textarea, select {
+    font-family: inherit;
+    background-color: var(--dark-surface);
+    border: 1px solid var(--dark-border);
+    color: var(--text-light);
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--accent);
+    background-color: var(--hover-bg);
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--dark-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: var(--transition);
+}
+
+.card:hover {
+    background-color: var(--hover-bg);
+}
+
+.video-thumbnail {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.video-thumbnail:hover {
+    transform: scale(1.03);
+}
+
+.label {
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.table th, .table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.table th {
+    text-align: left;
+    color: var(--text-light);
+}
+
+.table td {
+    color: var(--text-muted);
+}
